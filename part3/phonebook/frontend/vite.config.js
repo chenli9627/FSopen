@@ -7,7 +7,8 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:3001',
+        // target: 'http://localhost:3001',
+        target: 'https://f-sopen-22bj35an2-chenlis-projects-97bd1f64.vercel.app/',
         changeOrigin: true,
       }
     }
