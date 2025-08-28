@@ -1,0 +1,18 @@
+meta {
+  name: post_a_person
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3001/api/persons
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Chesdki",
+    "number": "17396222547"
+  }
+}
