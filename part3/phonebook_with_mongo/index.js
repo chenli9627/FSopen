@@ -92,7 +92,7 @@ app.post('/api/persons', (request, response, next) => {
       person.save().then(savedPerson => {
         response.json(savedPerson)
       }).catch(err => {
-        response.status(400)
+        response.status(400).json(err)
         next(err)
       })
       // persons = persons.concat(person)
@@ -117,10 +117,10 @@ app.put('/api/persons/:id', (request, response, next) => {
 })
 
 app.delete('/api/persons/:id', (req, res, next) => {
-  Person.findByIdAndDelete(req.params.id).then(result => {
+  Person.findByIdAndDelete(req.params.id).then(() => {
     res.status(204).end()
   })
-    .catch(error => next())
+    .catch(error => next(error))
 })
 
 const unKnownEndpoint = (req, res) => {
