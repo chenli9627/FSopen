@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "part3_phonebook_with_mongo",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

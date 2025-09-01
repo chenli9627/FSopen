@@ -1,0 +1,18 @@
+meta {
+  name: put_one_person
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://localhost:3001/api/persons/68b430bd7e2ad3858bb71805
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name":"fuck",
+    "number": "19491001"
+  }
+}
